@@ -5,6 +5,7 @@ using System.ServiceProcess;
 using LimiterConfig;
 using System.IO;
 using System.Globalization;
+using System.Threading;
 
 namespace SoftwareLimiterService
 {
@@ -142,7 +143,21 @@ namespace SoftwareLimiterService
             }
 
             outputDevice.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
+            ThreadPool.QueueUserWorkItem(LimitLoop);
 
+        }
+
+        private void LimitLoop(Object o)
+        {
+            while(true)
+            {
+                Thread.Sleep(30000);
+                if (outputDevice.AudioEndpointVolume.MasterVolumeLevelScalar > (config.CurrentMaxVolume / 100.0f))
+                {
+                    this.EventLog.WriteEntry("Volume too high! Got Volume" + outputDevice.AudioEndpointVolume.MasterVolumeLevelScalar.ToString("0.00") + ", Current max setting is " + (config.CurrentMaxVolume / 100.0f).ToString("0.00"));
+                    outputDevice.AudioEndpointVolume.MasterVolumeLevelScalar = config.CurrentMaxVolume / 100.0f;
+                }
+            }
         }
 
         private void AudioEndpointVolume_OnVolumeNotification(AudioVolumeNotificationData data)
