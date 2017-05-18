@@ -1,0 +1,92 @@
+﻿<Window x:Class="LimiterConfigInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LimiterConfigInterface"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="829.178" Background="#FF1B1A1A">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Slider x:Name="slider" Grid.Column="1" Orientation="Vertical" Value="10" TickPlacement="Both" Margin="10,0"/>
+        <Border Margin="10,10,0,29" HorizontalAlignment="Left" Width="280">
+            <Grid HorizontalAlignment="Left" Width="280">
+                <Button x:Name="button" Content="0" Margin="130,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy" Content=":30" Margin="163,4,97,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy1" Content="1" Margin="195,16,65,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy2" Content=":30" Margin="221,38,39,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy3" Content="2" Margin="244,66,16,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy4" Content=":30" Margin="254,96,6,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy6" Content="3" Margin="260,129,0,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy5" Content=":30" Margin="254,163,6,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy7" Content=":30" Margin="221,217,39,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy8" Content="2" Margin="244,192,16,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy9" Content="1" Margin="195,241,65,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy10" Content=":30" Margin="163,254,97,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy11" Content="0" Margin="130,260,130,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy12" Content=":30" Margin="98,4,162,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy13" Content=":30" Margin="98,254,162,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy14" Content="1" Margin="65,16,195,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy15" Content="1" Margin="65,241,195,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy16" Content=":30" Margin="39,38,221,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy17" Content=":30" Margin="39,217,221,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy18" Content="2" Margin="15,66,245,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy19" Content="2" Margin="15,192,245,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy20" Content=":30" Margin="4,96,256,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy21" Content=":30" Margin="4,163,256,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy22" Content="3" Margin="0,129,260,0" VerticalAlignment="Top" Height="20"/>
+            </Grid>
+        </Border>
+        <Border Margin="0,10,103,29" HorizontalAlignment="Right" Width="282">
+            <Grid HorizontalAlignment="Left" Width="279">
+                <Button x:Name="button1" Content="0" Margin="130,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy23" Content=":30" Margin="163,4,97,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy24" Content="1" Margin="195,16,65,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy25" Content=":30" Margin="221,38,39,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy26" Content="2" Margin="244,66,16,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy27" Content=":30" Margin="254,96,6,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy28" Content="3" Margin="260,129,0,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy29" Content=":30" Margin="254,163,6,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy30" Content=":30" Margin="221,217,39,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy31" Content="2" Margin="244,192,16,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy32" Content="1" Margin="195,241,65,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy33" Content=":30" Margin="163,254,97,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy34" Content="0" Margin="130,260,130,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy35" Content=":30" Margin="98,4,162,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy36" Content=":30" Margin="98,254,162,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy37" Content="1" Margin="65,16,195,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy38" Content="1" Margin="65,241,195,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy39" Content=":30" Margin="39,38,221,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy40" Content=":30" Margin="39,217,221,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy41" Content="2" Margin="15,66,245,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy42" Content="2" Margin="15,192,245,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy43" Content=":30" Margin="4,96,256,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy44" Content=":30" Margin="4,163,256,0" VerticalAlignment="Top" Height="20"/>
+                <Button x:Name="button_Copy45" Content="3" Margin="0,129,260,0" VerticalAlignment="Top" Height="20"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
