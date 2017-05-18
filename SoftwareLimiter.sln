@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareLimiter", "SoftwareLimiter\SoftwareLimiter.csproj", "{AFEF115F-EF41-486C-8935-EE28395B5037}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareLimiterService", "SoftwareLimiterService\SoftwareLimiterService.csproj", "{8CFE9F23-2C2A-43F0-ACA9-F87D5ECB6319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimiterConfig", "LimiterConfig\LimiterConfig.csproj", "{53F3336B-46E1-4333-986E-39654763BFA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFEF115F-EF41-486C-8935-EE28395B5037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEF115F-EF41-486C-8935-EE28395B5037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEF115F-EF41-486C-8935-EE28395B5037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEF115F-EF41-486C-8935-EE28395B5037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CFE9F23-2C2A-43F0-ACA9-F87D5ECB6319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CFE9F23-2C2A-43F0-ACA9-F87D5ECB6319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CFE9F23-2C2A-43F0-ACA9-F87D5ECB6319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CFE9F23-2C2A-43F0-ACA9-F87D5ECB6319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F3336B-46E1-4333-986E-39654763BFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F3336B-46E1-4333-986E-39654763BFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F3336B-46E1-4333-986E-39654763BFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F3336B-46E1-4333-986E-39654763BFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
