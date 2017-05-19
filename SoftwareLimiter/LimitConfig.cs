@@ -8,11 +8,11 @@ namespace LimiterConfig
 {
     public class LimitConfig
     {
-        public Dictionary<DateTime, float> Mappings { get; private set; }
+        public Dictionary<TimeSpan, float> Mappings { get; private set; }
         
         public LimitConfig()
         {
-            Mappings = new Dictionary<DateTime, float>();
+            Mappings = new Dictionary<TimeSpan, float>();
         }
 
         public float CurrentMaxVolume
@@ -20,17 +20,17 @@ namespace LimiterConfig
             get
             {
                 return (from s in Mappings
-                       where s.Key.TimeOfDay <= DateTime.Now.TimeOfDay
-                       orderby s.Key.TimeOfDay
-                       select s.Value).First();
+                        where s.Key <= DateTime.Now.TimeOfDay
+                        orderby s.Key descending
+                        select s.Value).First();
             }
         }
 
-        public float GetMaxVolumeForTime(DateTime d)
+        public float GetMaxVolumeForTime(TimeSpan d)
         {
             return (from s in Mappings
-                    where s.Key.TimeOfDay <= d.TimeOfDay
-                    orderby s.Key.TimeOfDay
+                    where s.Key <= d
+                    orderby s.Key descending
                     select s.Value).First();
         }
     }

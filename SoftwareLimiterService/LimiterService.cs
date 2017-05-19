@@ -126,6 +126,13 @@ namespace SoftwareLimiterService
                 }
                 throw new Exception("Parser error. Pls fix your config file :(");
             }
+            // no newline at end?
+            if (hour != -1 && minute != -1)
+            {
+                vol = float.Parse(acc, CultureInfo.InvariantCulture);
+                TimeSpan d = new TimeSpan(hour, minute, 0);
+                lc.Mappings.Add(d, vol);
+            }
             return lc;
         }
         
@@ -134,7 +141,7 @@ namespace SoftwareLimiterService
             MMDeviceEnumerator enumerator = new MMDeviceEnumerator();
             outputDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
 
-            this.EventLog.WriteEntry("Startup. Got Volume" + outputDevice.AudioEndpointVolume.MasterVolumeLevelScalar.ToString("0.00") + ", Current max setting is " + (config.CurrentMaxVolume / 100.0f).ToString("0.00"));
+            this.EventLog.WriteEntry("Startup. Got Volume " + outputDevice.AudioEndpointVolume.MasterVolumeLevelScalar.ToString("0.00") + ", Current max setting is " + (config.CurrentMaxVolume / 100.0f).ToString("0.00"));
 
             // if it's too high on startup, limit
             if (outputDevice.AudioEndpointVolume.MasterVolumeLevelScalar > (config.CurrentMaxVolume / 100.0f))

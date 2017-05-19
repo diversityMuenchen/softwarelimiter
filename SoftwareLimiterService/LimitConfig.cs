@@ -21,7 +21,7 @@ namespace LimiterConfig
             {
                 return (from s in Mappings
                        where s.Key <= DateTime.Now.TimeOfDay
-                       orderby s.Key
+                       orderby s.Key descending
                        select s.Value).First();
             }
         }
@@ -30,7 +30,7 @@ namespace LimiterConfig
         {
             return (from s in Mappings
                     where s.Key <= d
-                    orderby s.Key
+                    orderby s.Key descending
                     select s.Value).First();
         }
     }
