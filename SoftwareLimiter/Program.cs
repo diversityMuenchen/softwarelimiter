@@ -64,7 +64,7 @@ namespace SoftwareLimiter
                         state = ConfigState.Comment;
                         continue;
                     }
-                    if ("012345689".Contains(c))
+                    if ("0123456789".Contains(c))
                     {
                         acc += c;
                         continue;
@@ -84,7 +84,7 @@ namespace SoftwareLimiter
                 }
                 else if (state == ConfigState.Minute)
                 {
-                    if ("012345689".Contains(c))
+                    if ("0123456789".Contains(c))
                     {
                         acc += c;
                         continue;
@@ -99,7 +99,7 @@ namespace SoftwareLimiter
                 }
                 else if (state == ConfigState.Volume)
                 {
-                    if ("012345689.".Contains(c))
+                    if ("0123456789.".Contains(c))
                     {
                         acc += c;
                         continue;

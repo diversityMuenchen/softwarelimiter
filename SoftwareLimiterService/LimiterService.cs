@@ -53,7 +53,7 @@ namespace SoftwareLimiterService
                         state = ConfigState.Comment;
                         continue;
                     }
-                    if ("012345689".Contains(c))
+                    if ("0123456789".Contains(c))
                     {
                         acc += c;
                         continue;
@@ -65,7 +65,7 @@ namespace SoftwareLimiterService
                         acc = "";
                         continue;
                     }
-                    if(acc == "" && c == '\n')
+                    if (acc == "" && c == '\n')
                     {
                         // empty line, ignore.
                         continue;
@@ -73,7 +73,7 @@ namespace SoftwareLimiterService
                 }
                 else if (state == ConfigState.Minute)
                 {
-                    if ("012345689".Contains(c))
+                    if ("0123456789".Contains(c))
                     {
                         acc += c;
                         continue;
@@ -88,18 +88,18 @@ namespace SoftwareLimiterService
                 }
                 else if (state == ConfigState.Volume)
                 {
-                    if ("012345689.".Contains(c))
+                    if ("0123456789.".Contains(c))
                     {
                         acc += c;
                         continue;
                     }
-                    if(c == '#')
+                    if (c == '#')
                     {
                         state = ConfigState.LineEndComment;
                         continue;
                     }
                 }
-                if(c == '\r')
+                if (c == '\r')
                 {
                     // carriage return will be ignored.
                     continue;
@@ -115,7 +115,7 @@ namespace SoftwareLimiterService
                     state = ConfigState.Hour;
                     continue;
                 }
-                if(c == '\n' && state == ConfigState.Comment)
+                if (c == '\n' && state == ConfigState.Comment)
                 {
                     state = ConfigState.Hour;
                     continue;
